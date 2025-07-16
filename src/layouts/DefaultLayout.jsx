@@ -34,7 +34,7 @@ const DefaultLayout = () => {
             <input id="nav-drawer" type="checkbox" className="drawer-toggle"/>
 
             {/* Header navbar */}
-            <header className="navbar bg-base-100 border border-base-300 lg:rounded-box shadow-lg fixed z-10 inset-x-0 lg:mt-5 mx-auto lg:max-w-screen-lg xl:max-w-screen-xl">
+            <header className="navbar bg-primary border border-base-300 lg:rounded-box shadow-lg fixed z-10 inset-x-0 lg:mt-5 mx-auto lg:max-w-screen-lg xl:max-w-screen-xl">
                 {/* Logo */}
                 <div className="navbar-start">
                     <Link to="/">
