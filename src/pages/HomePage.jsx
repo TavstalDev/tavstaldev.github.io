@@ -312,7 +312,7 @@ function HomePage() {
                                 <h3 className="text-2xl font-semibold mb-3">MesterMC Installer</h3>
                                 <p className="text-base-content/75 mb-4 text-sm">
                                     A portable, cross-platform JavaFX desktop application designed to download
-                                    the unofficial MesterMC game launcher.
+                                    the official MesterMC game launcher.
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     <span className="badge badge-warning font-semibold py-0.5">Java</span>
