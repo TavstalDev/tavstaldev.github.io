@@ -15,7 +15,7 @@ function HomePage() {
                         Eager to learn, build, and innovate across the full stack.
                     </p>
                     <a
-                        href="#contact"
+                        href="#connect"
                         className="btn btn-lg btn-accent hover:bg-accent hover:text-base-content transition-all duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg"
                     >
                         <span className="font-bold">Get in Touch</span>
