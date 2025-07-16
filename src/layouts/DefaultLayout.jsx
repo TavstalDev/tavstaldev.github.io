@@ -37,9 +37,7 @@ const DefaultLayout = () => {
             <header className="navbar bg-primary border border-base-300 lg:rounded-box shadow-lg fixed z-10 inset-x-0 lg:mt-5 mx-auto lg:max-w-screen-lg xl:max-w-screen-xl">
                 {/* Logo */}
                 <div className="navbar-start">
-                    <Link to="/">
-                        <img src="/images/logo.png" alt="TavstalDev" className="max-w-55 px-2 text-xl text-base-content font-bold" />
-                    </Link>
+                    <p className="max-w-55 px-2 text-xl text-base-content font-bold">TavstalDev</p>
                 </div>
 
                 {/* Center */}
