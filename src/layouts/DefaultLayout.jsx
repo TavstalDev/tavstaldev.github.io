@@ -19,11 +19,19 @@ const DefaultLayout = () => {
             setSwitcherTheme("dark");
     }, []);
     
+    const handleDrawerButton = () => {
+        const drawer = document.getElementById("nav-drawer");
+        if (!drawer)
+            return;
+        
+        drawer.checked = false;
+    }
+    
 
     return (
         <>
             {/* Drawer for mobile */}
-            <input id="my-drawer-3" type="checkbox" className="drawer-toggle"/>
+            <input id="nav-drawer" type="checkbox" className="drawer-toggle"/>
 
             {/* Header navbar */}
             <header className="navbar bg-base-100 border border-base-300 lg:rounded-box shadow-lg fixed z-10 inset-x-0 lg:mt-5 mx-auto lg:max-w-screen-lg xl:max-w-screen-xl">
@@ -161,7 +169,7 @@ const DefaultLayout = () => {
                         </button>
 
                         {/* Sidebar toggle */}
-                        <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost px-2">
+                        <label htmlFor="nav-drawer" aria-label="open sidebar" className="btn btn-square btn-ghost px-2">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -182,40 +190,40 @@ const DefaultLayout = () => {
 
             {/* Navigation Sidebar */}
             <div className="drawer-side lg:hidden">
-                <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
+                <label htmlFor="nav-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                 <ul className="menu bg-base-200 min-h-full w-80 pt-18">
                     {/* About Me */}
                     <li>
                         <h2 className="menu-title">Navigation</h2>
-                        <a href="#aboutme">
+                        <a href="#aboutme" onClick={handleDrawerButton}>
                             <i className="fa fa-address-card text-base"></i>
                             About Me
                         </a>
                     </li>
                     {/* Tech Stack */}
                     <li>
-                        <a href="#techstack">
+                        <a href="#techstack" onClick={handleDrawerButton}>
                             <i className="fa fa-tools text-base"></i>
                             Tech Stack
                         </a>
                     </li>
                     {/* Projects */}
                     <li>
-                        <a href="#projects">
+                        <a href="#projects" onClick={handleDrawerButton}>
                             <i className="fa fa-rocket text-base"></i>
                             Projects
                         </a>
                     </li>
                     {/* Education */}
                     <li>
-                        <a href="#education">
+                        <a href="#education" onClick={handleDrawerButton}>
                             <i className="fa fa-user-graduate text-base"></i>
                             Education
                         </a>
                     </li>
                     {/* Connect */}
                     <li>
-                        <a href="#connect">
+                        <a href="#connect" onClick={handleDrawerButton}>
                             <i className="fa fa-envelope text-base"></i>
                             Connect
                         </a>
