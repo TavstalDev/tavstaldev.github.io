@@ -1,17 +1,6 @@
-import {useEffect} from "react";
-import GeneralUtils from "../utils/GeneralUtils.jsx";
 import projectConfig from "../config/projectConfig.jsx";
 
 function HomePage() {
-    const toast = GeneralUtils.useToast();
-    useEffect(() => {
-        /*toast.fire({
-            title: 'Warning',
-            text: "This page is still under development. Some sections may not be fully functional.",
-            icon: 'warning'
-        })*/
-    })
-
     return (
         <>
             {/* Welcome */}
@@ -49,7 +38,7 @@ function HomePage() {
 
             {/* About Me */}
             <div className="bg-base-100 py-16 max-w-6xl mx-auto">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="grid md:grid-cols-2 items-center gap-12 px-8 xs:px-12 sm:px-16 md:px-20 lg:px-24">
                     <div className="space-y-6 text-lg">
                         <p className="text-base-content/75 leading-relaxed mb-6">
                             I'm a dedicated self-taught <span className="font-semibold text-primary">C# and .NET backend developer</span> from
@@ -99,10 +88,10 @@ function HomePage() {
 
             {/* Tech Stack */}
             <div className="bg-base-200 py-16">
-                <div className="max-w-5xl mx-auto ">
+                <div className="max-w-5xl items-center mx-auto px-8 xs:px-12 sm:px-16">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* Languages */}
-                        <div className="stack stack-top">
+                        <div className="stack stack-top z-0">
                             <div className="bg-base-100 text-base-content rounded-box p-8">
                                 <h1 className="text-2xl font-bold mb-4">
                                     <i className="fa-solid fa-code text-primary mr-4"></i>
@@ -120,7 +109,7 @@ function HomePage() {
                             <div className="bg-primary grid place-content-center rounded-box"></div>
                         </div>
                         {/* Backend */}
-                        <div className="stack stack-top">
+                        <div className="stack stack-top z-0">
                             <div className="bg-base-100 text-base-content rounded-box p-8">
                                 <h1 className="text-2xl font-bold mb-4">
                                     <i className="fa-solid fa-server text-success mr-4"></i>
@@ -137,7 +126,7 @@ function HomePage() {
                             <div className="bg-success grid place-content-center rounded-box"></div>
                         </div>
                         {/* Databases */}
-                        <div className="stack stack-top">
+                        <div className="stack stack-top z-0">
                             <div className="bg-base-100 text-base-content rounded-box p-8">
                                 <h1 className="text-2xl font-bold mb-4">
                                     <i className="fa-solid fa-database text-warning mr-4"></i>
@@ -153,7 +142,7 @@ function HomePage() {
                         </div>
 
                         {/* Frontend */}
-                        <div className="stack stack-top">
+                        <div className="stack stack-top z-0">
                             <div className="bg-base-100 text-base-content rounded-box p-8">
                                 <h1 className="text-2xl font-bold mb-4">
                                     <i className="fa-solid fa-laptop-code text-accent mr-4"></i>
@@ -170,7 +159,7 @@ function HomePage() {
                             <div className="bg-accent grid place-content-center rounded-box"></div>
                         </div>
                         {/* Game Dev */}
-                        <div className="stack stack-top">
+                        <div className="stack stack-top z-0">
                             <div className="bg-base-100 text-base-content rounded-box p-8">
                                 <h1 className="text-2xl font-bold mb-4">
                                     <i className="fa-solid fa-gamepad text-error mr-4"></i>
@@ -184,7 +173,7 @@ function HomePage() {
                             <div className="bg-error grid place-content-center rounded-box"></div>
                         </div>
                         {/* Modding  */}
-                        <div className="stack stack-top">
+                        <div className="stack stack-top z-0">
                             <div className="bg-base-100 text-base-content rounded-box p-8">
                                 <h1 className="text-2xl font-bold mb-4">
                                     <i className="fa-solid fa-puzzle-piece text-info mr-4"></i>
@@ -200,7 +189,7 @@ function HomePage() {
                         </div>
 
                         {/* DevOps */}
-                        <div className="stack stack-top">
+                        <div className="stack stack-top z-0">
                             <div className="bg-base-100 text-base-content rounded-box p-8">
                                 <h1 className="text-2xl font-bold mb-4">
                                     <i className="fa-solid fa-code text-warning/75 mr-4"></i>
@@ -218,7 +207,7 @@ function HomePage() {
                             <div className="bg-warning/75 grid place-content-center rounded-box"></div>
                         </div>
                         {/* Tools */}
-                        <div className="stack stack-top">
+                        <div className="stack stack-top z-0">
                             <div className="bg-base-100 text-base-content rounded-box p-8">
                                 <h1 className="text-2xl font-bold mb-4">
                                     <i className="fa-solid fa-code text-secondary mr-4"></i>
@@ -236,7 +225,7 @@ function HomePage() {
                             <div className="bg-secondary grid place-content-center rounded-box"></div>
                         </div>
                         {/* Operating Systems */}
-                        <div className="stack stack-top">
+                        <div className="stack stack-top z-0">
                             <div className="bg-base-100 text-base-content rounded-box p-8">
                                 <h1 className="text-2xl font-bold mb-4">
                                     <i className="fa-solid fa-database text-success/75 mr-4"></i>
@@ -263,10 +252,62 @@ function HomePage() {
             {/* My Projects */}
             {/* TODO */}
             <div className="bg-base-100 py-16">
-                <div className="max-w-5xl mx-auto">
+                <div className="max-w-5xl mx-auto px-8 xs:px-12 sm:px-16">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* Project Base */}
-                        <div className="stack stack-top">
+                        <div className="stack stack-top z-0">
+                            <div className="bg-base-200 text-base-content rounded-box p-8">
+                                <h3 className="text-2xl font-semibold mb-3">Project Title One</h3>
+                                <p className="text-base-content/75 mb-4 text-sm">A brief description of Project One,
+                                    highlighting its purpose and key features. This project showcases my skills in C#
+                                    and .NET for backend development. Keep this concise and impactful.</p>
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
+                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
+                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
+                                </div>
+                                <div className="flex justify-between items-center mt-6">
+                                    <a href="#" target="_blank" rel="noopener noreferrer"
+                                       className="text-info font-medium text-sm">
+                                        <i className="fab fa-github mr-1"></i> GitHub Repo
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer"
+                                       className="text-purple-400 font-medium text-sm">
+                                        <i className="fas fa-external-link-alt mr-1"></i> Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="bg-primary grid place-content-center rounded-box"></div>
+                        </div>
+
+                        {/* Project Base */}
+                        <div className="stack stack-top z-0">
+                            <div className="bg-base-200 text-base-content rounded-box p-8">
+                                <h3 className="text-2xl font-semibold mb-3">Project Title One</h3>
+                                <p className="text-base-content/75 mb-4 text-sm">A brief description of Project One,
+                                    highlighting its purpose and key features. This project showcases my skills in C#
+                                    and .NET for backend development. Keep this concise and impactful.</p>
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
+                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
+                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
+                                </div>
+                                <div className="flex justify-between items-center mt-6">
+                                    <a href="#" target="_blank" rel="noopener noreferrer"
+                                       className="text-info font-medium text-sm">
+                                        <i className="fab fa-github mr-1"></i> GitHub Repo
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer"
+                                       className="text-purple-400 font-medium text-sm">
+                                        <i className="fas fa-external-link-alt mr-1"></i> Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="bg-primary grid place-content-center rounded-box"></div>
+                        </div>
+
+                        {/* Project Base */}
+                        <div className="stack stack-top z-0">
                             <div className="bg-base-200 text-base-content rounded-box p-8">
                                 <h3 className="text-2xl font-semibold mb-3">Project Title One</h3>
                                 <p className="text-base-content/75 mb-4 text-sm">A brief description of Project One,
@@ -293,7 +334,7 @@ function HomePage() {
                     </div>
 
                     <p className="text-base-content/50 text-center mt-10">
-                        This is just a selection. You can find more of my work on my <a href="" className="text-accent">GitHub profile</a>.
+                        This is just a selection. You can find more of my work on my <a href={projectConfig.githubUrl} className="text-accent">GitHub profile</a>.
                     </p>
                 </div>
             </div>
@@ -306,19 +347,17 @@ function HomePage() {
             </div>
 
             {/* Education */}
-            {/* TODO */}
             <div className="bg-base-200 py-16 px-4 md:px-8">
                 <div className="max-w-5xl mx-auto ">
                     <div className="grid grid-cols-1 gap-8">
                         {/* Self-Taught */}
-                        <div className="stack stack-start">
+                        <div className="stack stack-start z-0">
                             <div className="bg-base-100 grid rounded-box p-8">
-                                <h3 className="text-2xl text-base-content font-bold mb-2">Self-Taught Programmer &
-                                    Developer</h3>
+                                <h3 className="text-2xl text-base-content font-bold mb-2">Self-Taught Programmer & Developer</h3>
                                 <p className="text-base-content/75 mb-4">
                                     <i className="fa fa-chalkboard-teacher text-primary mr-2"></i>
                                     <span className="text-primary font-medium">Continuous Learning & Practical Application</span> |
-                                    Present
+                                    2018 - Present
                                 </p>
                                 <ul className="list-disc list-inside text-base-content/50 space-y-1 ml-4">
                                     <li><i className="fas fa-laptop-code text-primary mr-2"></i>Extensive self-study in
@@ -342,30 +381,38 @@ function HomePage() {
                         </div>
 
                         {/* School */}
-                        <div className="stack stack-start">
+                        <div className="stack stack-start z-0">
                             <div className="bg-base-100 grid rounded-box p-8">
-                                <h3 className="text-2xl text-base-content font-bold mb-2">Self-Taught Programmer &
-                                    Developer</h3>
+                                <h3 className="text-2xl text-base-content font-bold mb-2">Network Administrator and Operator Technician</h3>
                                 <p className="text-base-content/75 mb-4">
-                                    <i className="fa fa-chalkboard-teacher text-success mr-2"></i>
-                                    <span className="text-success font-medium">Continuous Learning & Practical Application</span> |
-                                    Present
+                                    <i className="fa fa-university text-success mr-2"></i>
+                                    <span className="text-success font-medium">SZC Eötvös Loránd Technical College and Technical Technical School, Kaposvár, Hungary</span> |
+                                    2019 - 2025
                                 </p>
                                 <ul className="list-disc list-inside text-base-content/50 space-y-1 ml-4">
-                                    <li><i className="fas fa-laptop-code text-success mr-2"></i>Extensive self-study in
-                                        C#, .NET, ASP.NET, React.js, and modern web technologies.
+                                    <li>
+                                        <i className="fas fa-graduation-cap text-success mr-2"></i> 
+                                        <strong>Dual Education Program:</strong> Completed a comprehensive program combining theoretical studies with extensive practical experience.
                                     </li>
-                                    <li><i className="fas fa-database text-success mr-2"></i>Hands-on experience with
-                                        MySQL, MariaDB, and PostgreSQL.
+                                    <li>
+                                        <i className="fas fa-network-wired text-success mr-2"></i>
+                                        <strong>Core Competencies:</strong> Acquired in-depth knowledge and hands-on skills in network administration, maintenance, and operation.
                                     </li>
-                                    <li><i className="fas fa-tools text-success mr-2"></i>Proficient in Git, Docker,
-                                        Nginx, and CI/CD concepts.
+                                    <li>
+                                        <i className="fas fa-desktop text-success mr-2"></i>
+                                        <strong>System Administration:</strong> Proficient in Windows and Linux server administration and troubleshooting.
                                     </li>
-                                    <li><i className="fas fa-gamepad text-success mr-2"></i>Applied knowledge in game
-                                        plugin/modding for platforms like Minecraft and Unity.
+                                    <li>
+                                        <i className="fas fa-certificate text-success mr-2"></i>
+                                        <strong>Qualifications:</strong> Obtained a High School Diploma and a professional qualification as a Network Administrator and Operator Technician.
                                     </li>
-                                    <li><i className="fas fa-check-circle text-success mr-2"></i>Focused on building
-                                        robust, maintainable, and scalable backend solutions.
+                                    <li>
+                                        <i className="fas fa-level-up-alt text-success mr-2"></i>
+                                        <strong>European Qualification Framework (<a href="https://europass.europa.eu/en/description-eight-eqf-levels" className="text-accent">EQF</a>) Level:</strong> <span className="text-success">8</span>.
+                                    </li>
+                                    <li>
+                                        <i className="fas fa-tools text-success mr-2"></i>
+                                        <strong>Practical Skills:</strong> Gained experience with network infrastructure setup, troubleshooting, security protocols, and system management.
                                     </li>
                                 </ul>
                             </div>
@@ -373,41 +420,45 @@ function HomePage() {
                         </div>
 
                         {/* Certificate */}
-                        <div className="stack stack-start">
+                        <div className="stack stack-start z-0">
                             <div className="bg-base-100 grid rounded-box p-8">
-                                <h3 className="text-2xl text-base-content font-bold mb-2">Self-Taught Programmer &
-                                    Developer</h3>
+                                <h3 className="text-2xl text-base-content font-bold mb-2">Cisco Certified Network Associate (CCNA) - Foundation</h3>
                                 <p className="text-base-content/75 mb-4">
-                                    <i className="fa fa-chalkboard-teacher text-accent mr-2"></i>
-                                    <span className="text-accent font-medium">Continuous Learning & Practical Application</span> |
-                                    Present
+                                    <i className="fa fa-certificate text-info mr-2"></i>
+                                    <span className="text-info font-medium">Cisco Networking Academy</span> |
+                                    Completed: 2024 December
                                 </p>
                                 <ul className="list-disc list-inside text-base-content/50 space-y-1 ml-4">
-                                    <li><i className="fas fa-laptop-code text-accent mr-2"></i>Extensive self-study in
-                                        C#, .NET, ASP.NET, React.js, and modern web technologies.
+                                    <li>
+                                        <i className="fas fa-network-wired text-info mr-2"></i>
+                                        <strong>Network Fundamentals:</strong> Solid grasp of network models (OSI/TCP-IP), protocols, and IP addressing (IPv4/IPv6).
                                     </li>
-                                    <li><i className="fas fa-database text-accent mr-2"></i>Hands-on experience with
-                                        MySQL, MariaDB, and PostgreSQL.
+                                    <li>
+                                        <i className="fas fa-cogs text-info mr-2"></i>
+                                        <strong>Cisco Device Management:</strong> Practical skills in configuring, operating, and troubleshooting Cisco routers and switches.
                                     </li>
-                                    <li><i className="fas fa-tools text-accent mr-2"></i>Proficient in Git, Docker,
-                                        Nginx, and CI/CD concepts.
+
+                                    <li>
+                                        <i className="fas fa-link text-info mr-2"></i>
+                                        <strong>Network Basics: </strong>
+                                        <a href="/certificates/Networking_Basics_certificate_zoltansolymosi.pdf" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">View Certificate</a>
                                     </li>
-                                    <li><i className="fas fa-gamepad text-accent mr-2"></i>Applied knowledge in game
-                                        plugin/modding for platforms like Minecraft and Unity.
-                                    </li>
-                                    <li><i className="fas fa-check-circle text-accent mr-2"></i>Focused on building
-                                        robust, maintainable, and scalable backend solutions.
+                                    <li>
+                                        <i className="fas fa-link text-info mr-2"></i>
+                                        <strong>Networking Devices and Initial Configuration: </strong>
+                                        <a href="/certificates/Networking_Devices_and_Initial_Configuration_certificate_zoltansolymosi.pdf" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">View Certificate</a>
                                     </li>
                                 </ul>
                             </div>
-                            <div className="bg-accent rounded-box"></div>
+                            <div className="bg-info rounded-box"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Vertical Gradient Divider */}
-            <div id="connect" className="h-32 flex items-center justify-center bg-gradient-to-b from-base-200 to-base-100">
+            <div id="connect"
+                 className="h-32 flex items-center justify-center bg-gradient-to-b from-base-200 to-base-100">
                 <h2 id="play" className="text-4xl font-extrabold text-center text-primary my-12">
                     Connect with Me
                 </h2>
