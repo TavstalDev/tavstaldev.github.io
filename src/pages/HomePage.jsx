@@ -245,91 +245,90 @@ function HomePage() {
             {/* Vertical Gradient Divider */}
             <div id="projects" className="h-32 flex items-center justify-center bg-gradient-to-b from-base-200 to-base-100">
                 <h2 id="play" className="text-4xl font-extrabold text-center text-primary my-12">
-                    My Projects
+                    Projects
                 </h2>
             </div>
 
-            {/* My Projects */}
-            {/* TODO */}
+            {/* Projects */}
             <div className="bg-base-100 py-16">
-                <div className="max-w-5xl mx-auto px-8 xs:px-12 sm:px-16">
+                <div className="max-w-5xl mx-auto px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* Project Base */}
+                        {/* RedstonePlugins */}
                         <div className="stack stack-top z-0">
-                            <div className="bg-base-200 text-base-content rounded-box p-8">
-                                <h3 className="text-2xl font-semibold mb-3">Project Title One</h3>
-                                <p className="text-base-content/75 mb-4 text-sm">A brief description of Project One,
-                                    highlighting its purpose and key features. This project showcases my skills in C#
-                                    and .NET for backend development. Keep this concise and impactful.</p>
+                            <div className="flex flex-col bg-base-200 text-base-content rounded-box p-8">
+                                <h3 className="text-2xl font-semibold mb-3">RedstonePlugins Website</h3>
+                                <p className="text-base-content/75 mb-4 text-sm">
+                                    As the backend developer, I built and maintain the API and payment server for this live e-commerce platform.
+                                    It handles secure transactions and data flow for a thriving online community.
+                                </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
-                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
-                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
-                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
+                                    <span className="badge badge-error font-semibold py-0.5">ASP.NET 6</span>
+                                    <span className="badge badge-error font-semibold py-0.5">C#</span>
+                                    <span className="badge badge-error font-semibold py-0.5">PayPal API</span>
+                                    <span className="badge badge-error font-semibold py-0.5">ReactJS</span>
+                                    <span className="badge badge-error font-semibold py-0.5">Dashmix</span>
+                                    <span className="badge badge-error font-semibold py-0.5">Swagger</span>
                                 </div>
-                                <div className="flex justify-between items-center mt-6">
-                                    <a href="#" target="_blank" rel="noopener noreferrer"
-                                       className="text-info font-medium text-sm">
-                                        <i className="fab fa-github mr-1"></i> GitHub Repo
-                                    </a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer"
-                                       className="text-purple-400 font-medium text-sm">
-                                        <i className="fas fa-external-link-alt mr-1"></i> Live Demo
+                                <div className="flex justify-between items-center mt-auto">
+                                    <a href="https://redstoneplugins.com" target="_blank" rel="noopener noreferrer"
+                                       className="text-accent font-medium text-sm">
+                                        <i className="fas fa-external-link-alt mr-1"></i> Live Site
                                     </a>
                                 </div>
                             </div>
-                            <div className="bg-primary grid place-content-center rounded-box"></div>
+                            <div className="bg-error grid place-content-center rounded-box"></div>
                         </div>
 
-                        {/* Project Base */}
+                        {/* KonkordMC */}
                         <div className="stack stack-top z-0">
-                            <div className="bg-base-200 text-base-content rounded-box p-8">
-                                <h3 className="text-2xl font-semibold mb-3">Project Title One</h3>
-                                <p className="text-base-content/75 mb-4 text-sm">A brief description of Project One,
-                                    highlighting its purpose and key features. This project showcases my skills in C#
-                                    and .NET for backend development. Keep this concise and impactful.</p>
+                            <div className="flex flex-col bg-base-200 text-base-content rounded-box p-8">
+                                <h3 className="text-2xl font-semibold mb-3">KonkordMC</h3>
+                                <p className="text-base-content/75 mb-4 text-sm">
+                                    A work-in-progress, full-stack ReactJS website for a fictional Minecraft server network.
+                                    I'm solely responsible for all frontend and backend development, including
+                                    a support ticket system, shop, and user dashboard.
+                                </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
-                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
-                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
-                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
+                                    <span className="badge badge-info font-semibold py-0.5">C#</span>
+                                    <span className="badge badge-info font-semibold py-0.5">ASP.NET 9</span>
+                                    <span className="badge badge-info font-semibold py-0.5">ReactJS</span>
+                                    <span className="badge badge-info font-semibold py-0.5">TailwindCSS</span>
+                                    <span className="badge badge-info font-semibold py-0.5">DaisyUI</span>
+                                    <span className="badge badge-info font-semibold py-0.5">PayPal</span>
                                 </div>
-                                <div className="flex justify-between items-center mt-6">
-                                    <a href="#" target="_blank" rel="noopener noreferrer"
-                                       className="text-info font-medium text-sm">
+                                <div className="flex justify-between items-center mt-auto">
+                                    <a href="https://github.com/TavstalDev/KonkordMC" target="_blank" rel="noopener noreferrer"
+                                       className="text-accent font-medium text-sm">
                                         <i className="fab fa-github mr-1"></i> GitHub Repo
-                                    </a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer"
-                                       className="text-purple-400 font-medium text-sm">
-                                        <i className="fas fa-external-link-alt mr-1"></i> Live Demo
                                     </a>
                                 </div>
                             </div>
-                            <div className="bg-primary grid place-content-center rounded-box"></div>
+                            <div className="bg-info grid place-content-center rounded-box"></div>
                         </div>
 
-                        {/* Project Base */}
+                        {/* MesterMC Installer */}
                         <div className="stack stack-top z-0">
-                            <div className="bg-base-200 text-base-content rounded-box p-8">
-                                <h3 className="text-2xl font-semibold mb-3">Project Title One</h3>
-                                <p className="text-base-content/75 mb-4 text-sm">A brief description of Project One,
-                                    highlighting its purpose and key features. This project showcases my skills in C#
-                                    and .NET for backend development. Keep this concise and impactful.</p>
+                            <div className="flex flex-col bg-base-200 text-base-content rounded-box p-8">
+                                <h3 className="text-2xl font-semibold mb-3">MesterMC Installer</h3>
+                                <p className="text-base-content/75 mb-4 text-sm">
+                                    A portable, cross-platform JavaFX desktop application designed to download
+                                    the unofficial MesterMC game launcher.
+                                </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
-                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
-                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
-                                    <span className="badge badge- badge-info font-semibold py-0.5">C#</span>
+                                    <span className="badge badge-warning font-semibold py-0.5">Java</span>
+                                    <span className="badge badge-warning font-semibold py-0.5">JavaFX</span>
+                                    <span className="badge badge-warning font-semibold py-0.5">JPackage</span>
+                                    <span className="badge badge-warning font-semibold py-0.5">FXML</span>
+                                    <span className="badge badge-warning font-semibold py-0.5">Powershell</span>
                                 </div>
-                                <div className="flex justify-between items-center mt-6">
-                                    <a href="#" target="_blank" rel="noopener noreferrer"
-                                       className="text-info font-medium text-sm">
+                                <div className="flex justify-between items-center mt-auto">
+                                    <a href="https://github.com/TavstalDev/MesterMC-Installer" target="_blank" rel="noopener noreferrer"
+                                       className="text-accent font-medium text-sm">
                                         <i className="fab fa-github mr-1"></i> GitHub Repo
-                                    </a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer"
-                                       className="text-purple-400 font-medium text-sm">
-                                        <i className="fas fa-external-link-alt mr-1"></i> Live Demo
                                     </a>
                                 </div>
                             </div>
-                            <div className="bg-primary grid place-content-center rounded-box"></div>
+                            <div className="bg-warning grid place-content-center rounded-box"></div>
                         </div>
                     </div>
 
