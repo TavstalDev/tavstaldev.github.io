@@ -1,0 +1,15 @@
+.swal2-popup {
+    @apply bg-base-100 text-white;
+}
+
+.swal2-title {
+    @apply text-lg;
+}
+
+.swal2-html-container {
+    @apply text-sm;
+}
+
+.swal2-icon-content {
+    @apply font-mono;
+}
