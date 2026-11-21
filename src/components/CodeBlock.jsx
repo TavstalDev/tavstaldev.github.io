@@ -8,7 +8,10 @@ SyntaxHighlighter.registerLanguage("csharp", csharp);
 SyntaxHighlighter.registerLanguage("java", java);
 SyntaxHighlighter.registerLanguage("javascript", javascript);
 
-export default function CodeBlock({ code, language = "csharp", dark = true }) {
+export default function CodeBlock({ code, language = "csharp" }) {
+    const darkModeMql = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+    const dark = darkModeMql && darkModeMql.matches;
+    
     return (
         <SyntaxHighlighter language={language} style={dark ? vscDarkPlus : vs} showLineNumbers>
             {code}
