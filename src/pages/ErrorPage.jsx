@@ -164,27 +164,82 @@ function ErrorPage({errorCode}) {
     if (!isHttpErrorCode(errorCode)) {
         errorCode = 418;
     }
+    const path = (new URLSearchParams(location.search).get("path") || location.pathname || "/");
+    const now = new Date().toISOString().replace("T", " ").slice(0, 19) + " UTC";
 
     return (
         <>
-            <div className="hero bg-base-200 min-h-screen" style={{
-                backgroundImage:
-                    "url(/images/error.png)",
-            }}>
-                <div className="hero-overlay"></div>
-                <div className="hero-content flex-col lg:flex-row">
-                    <div>
-                        <p className="text-xl text-error font-bold py-2 ">{errorCode} ERROR</p>
-                        <h1 className="text-2xl text-white font-bold">{getHttpErrorName(errorCode)}</h1>
-                        <p className="pt-2 text-white/90 pb-4">
-                            {getHttpErrorDescription(errorCode)}
-                        </p>
-                        <a href="/" className="btn btn-error">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" className="h-5 w-5">
-                                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
-                            </svg>
-                            <span className="fw-bold">Go Back</span>
-                        </a>
+            <div className="container py-5">
+                <p className="prompt muted mb-2">curl -I {path}</p>
+                <div className="row g-5 align-items-center">
+                    <div className="col-lg-5">
+                        <div className="error-code" aria-hidden="true">{errorCode}</div>
+                        <h1 className="h3 fw-bold mt-3 mb-2">
+                            <span>{getHttpErrorName(errorCode)}</span>
+                            <span className="cursor">&nbsp;</span>
+                        </h1>
+                        <p className="muted">{getHttpErrorDescription(errorCode)}</p>
+                        <div className="d-flex flex-wrap gap-2 mt-4">
+                            <a href="/" className="btn btn-sm btn-outline-sd">
+                                <i className="bi bi-house-fill me-1"></i>
+                                Go home
+                            </a>
+                            <a href="/#projects" className="btn btn-sm btn-outline-sd">
+                                <i className="bi bi-collection-fill me-1"></i>
+                                See projects
+                            </a>
+                            <button type="button" className="btn btn-sm btn-outline-sd" onClick={() => (history.length > 1 ? history.back() : (location.href = "/"))}>
+                                <i className="bi bi-arrow-left me-1"></i>
+                                Go back
+                            </button>
+                            <button type="button" className="btn btn-sm btn-outline-sd d-none">
+                                <i className="bi bi-arrow-clockwise me-1"></i>
+                                Try again
+                            </button>
+                        </div>
+                    </div>
+                    <div className="col-lg-7">
+                        <div className="box p-3 mb-3">
+                            <pre className="term">
+                                <div>
+                                    <span className="warn">HTTP/1.1 {errorCode} {getHttpErrorName(errorCode)}</span>
+                                </div>
+                                <div>
+                                     <span className="k">server:</span> tavstal.eu 
+                                </div>
+                                <div>
+                                     <span className="k">date:</span> {now} 
+                                </div>
+                                <div>
+                                    <span className="k">content-type:</span> text/html; charset=utf-8 
+                                </div>
+                                <div>
+                                    <span className="k">x-request-path:</span> {path}
+                                </div>
+                            </pre>
+                        </div>
+                        <div className="box p-3">
+                            <pre className="term">
+                                <div>
+                                     <span className="k">$</span> systemctl status page.service
+                                </div>
+                                <div>
+                                     <span className="warn">●</span> page.service - {path}
+                                </div>
+                                <div>
+                                    <span>  </span>Loaded: loaded
+                                </div>
+                                <div>
+                                     <span>  </span>Active: <span className="warn">inactive</span> since {now}
+                                </div>
+                                <div>
+                                      <span>  </span>Process: exited, status={errorCode}
+                                </div>
+                                <div>
+                                    <span className="k">hint:</span> {getHttpErrorDescription(errorCode)}
+                                </div>
+                            </pre>
+                        </div>
                     </div>
                 </div>
             </div>
