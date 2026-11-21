@@ -1,7 +1,7 @@
 import projectConfig from "../config/ProjectConfig.jsx";
 
 
-function ProjectCard({ title, category, description, icon, status, tags, links }) {
+function ProjectCard({ title, category, description, icon, status, tags, hasPage, links }) {
     const catLabel = (projectConfig.categories.find(x => x.key === category) || {}).label || category;
     const tagsHtml = (tags || []).map((x) => (
         <span className="tag" key={x}>{x}</span>
@@ -33,6 +33,12 @@ function ProjectCard({ title, category, description, icon, status, tags, links }
                             {tagsHtml}
                         </div>
                         <div className="mt-auto d-flex flex-wrap gap-2">
+                            {hasPage ? (
+                                <a className="btn btn-sm btn-outline-sd" href={`/project/${title}`} rel="noopener">
+                                    <i className={`bi bi-link-45deg me-1`}></i>
+                                    View
+                                </a>
+                            ) : (<></>)}
                             {linksHtml}
                         </div>
                     </div>
