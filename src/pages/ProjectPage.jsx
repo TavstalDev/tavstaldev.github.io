@@ -1,6 +1,7 @@
 import projectConfig from "../config/ProjectConfig.jsx";
 import ErrorPage from "./ErrorPage.jsx";
 import {useParams} from "react-router-dom";
+import CodeBlock from "../components/CodeBlock.jsx";
 
 function ProjectPage() {
     const { name } = useParams();
@@ -122,11 +123,7 @@ function ProjectPage() {
                                         Copy
                                     </button>
                                 </div>
-                                <pre>
-                                <code>
-                                    {x.code.map((x) => (`${x}`)).join('\n')}
-                                </code>
-                            </pre>
+                                <CodeBlock code={x.code.map((x) => (`${x}`)).join('\n')} />
                             </div>
                         ))}
                     </div>
