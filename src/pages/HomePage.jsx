@@ -95,6 +95,7 @@ function HomePage() {
                                 description={x.desc}
                                 icon={x.icon}
                                 tags={x.tags}
+                                hasPage={x.hasPage}
                                 links={x.links}
                             />
                         ))}
@@ -116,7 +117,7 @@ function HomePage() {
                                 {projectConfig.experience.map((x) => (
                                     <div className="tl-item" key={x.name}>
                                         <div className="muted small">{x.interval}</div>
-                                        <div className="fw-semibold">{x.name})</div>
+                                        <div className="fw-semibold">{x.name}</div>
                                         <div className="muted small mb-2">{x.location}</div>
                                         <ul className="small mb-0">
                                             {x.description.map((x) => (
@@ -135,7 +136,7 @@ function HomePage() {
                                 {projectConfig.education.map((x) => (
                                     <div className="tl-item" key={x.name}>
                                         <div className="muted small">{x.interval}</div>
-                                        <div className="fw-semibold">{x.name})</div>
+                                        <div className="fw-semibold">{x.name}</div>
                                         <div className="muted small">{x.location}</div>
                                     </div>
                                 ))}
