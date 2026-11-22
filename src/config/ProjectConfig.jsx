@@ -805,21 +805,574 @@ const projectConfig = {
                 }
             ] 
         },
-        { 
-            name: "Game server plugins", 
-            category: "plugins", 
-            status: "wip",
-            icon: "controller",
-            desc: "Ongoing hobby work: plugins for game servers, written in C# and Java.",
-            tags: ["C#", "Java", "Hobby"],
-            hasPage: false,
+        {
+            name: "RocketFlow",
+            category: "plugins",
+            status: "active",
+            icon: "rocket-fill",
+            desc: "A lightweight RocketMod library for Unturned plugins providing a clean, event-driven API with precise priority-based execution and 90+ ready-made events.",
+            tags: ["C#", "Unturned", "RocketMod", ".NET", "Event-Driven", "Library"],
+            hasPage: true,
             links: [
                 {
-                    label: "Code", 
-                    url: "https://github.com/TavstalDev",
+                    label: "Code",
+                    url: "https://github.com/TavstalDev/RocketFlow",
                     icon: "github"
                 }
-           ]
+            ],
+            features: [
+                {
+                    name: "Priority-Based Execution",
+                    icon: "arrow-repeat",
+                    desc: "Control the exact order handlers run using LOWEST, LOW, NORMAL, HIGH, and HIGHEST priorities."
+                },
+                {
+                    name: "90+ Built-in Events",
+                    icon: "lightning",
+                    desc: "Ready-made events covering players, barricades, structures, vehicles, items, damage, and world actions."
+                },
+                {
+                    name: "Cancellation Support",
+                    icon: "x-circle",
+                    desc: "Cancel ICancellable events from any handler to automatically skip lower-priority listeners."
+                },
+                {
+                    name: "Attribute-Based Setup",
+                    icon: "code-slash",
+                    desc: "Register methods cleanly with [EventHandler] and zero configuration—eliminating manual event wiring."
+                },
+                {
+                    name: "Fast Dispatch",
+                    icon: "speedometer2",
+                    desc: "Event invokers are compiled using expression trees to ensure minimal runtime overhead."
+                },
+                {
+                    name: "Clean Unregistration",
+                    icon: "trash",
+                    desc: "Unregister a single listener, an entire plugin, or a whole assembly with a single method call."
+                }
+            ]
+        },
+        {
+            name: "TLibrary",
+            category: "plugins",
+            status: "active",
+            icon: "collection-fill",
+            desc: "A versatile Unturned RocketMod 4 library offering helpers, extensions, logging, database utilities, and Discord webhook support to simplify plugin development.",
+            tags: ["C#", "Unturned", "RocketMod", ".NET", "MySQL", "Library"],
+            hasPage: true,
+            links: [
+                {
+                    label: "Code",
+                    url: "https://github.com/TavstalDev/TLibrary",
+                    icon: "github"
+                }
+            ],
+            features: [
+                {
+                    name: "Easier SQL Database Management",
+                    icon: "database",
+                    desc: "Intuitive methods via DatabaseHelper and MySqlExtensions for CRUD operations, connection pooling, transactions, and JSON data."
+                },
+                {
+                    name: "Subcommand System",
+                    icon: "terminal",
+                    desc: "Extendable command system supporting aliases, argument validation, and streamlined error handling."
+                },
+                {
+                    name: "Rich Chat & Console Formatter",
+                    icon: "palette",
+                    desc: "FormatHelper utilities for nested formatting, custom color schemes, and safe handling of special characters."
+                },
+                {
+                    name: "Custom Rich Logger",
+                    icon: "journal-text",
+                    desc: "TLogger with granular log levels, structured logging support, and external logging integration."
+                },
+                {
+                    name: "Discord Webhook",
+                    icon: "chat-dots",
+                    desc: "Send embeds, attachments, and reactions with built-in rate-limit handling and retries."
+                },
+                {
+                    name: "Hook Manager for Plugins",
+                    icon: "plugin",
+                    desc: "Dynamically register and unregister plugin hooks with robust error handling."
+                },
+                {
+                    name: "JSON Configuration & Localization",
+                    icon: "gear",
+                    desc: "Support for nested configurations, environment-specific settings, and configuration validation."
+                },
+                {
+                    name: "Helpers & Extensions",
+                    icon: "arrow-repeat",
+                    desc: "Ready-to-use helpers and extensions for arrays, strings, numbers, players, and Rocket plugins."
+                }
+            ]
+        },
+        {
+            name: "TShop",
+            category: "plugins",
+            status: "active",
+            icon: "basket2-fill",
+            desc: "A user-friendly Unturned RocketMod item and vehicle shop plugin featuring a custom HUD, discount system, Uconomy compatibility, and async MySQL database support.",
+            tags: ["C#", "Unturned", "RocketMod", ".NET", "MySQL", "Uconomy", "Plugin"],
+            hasPage: true,
+            links: [
+                {
+                    label: "Code",
+                    url: "https://github.com/TavstalDev/TShop2",
+                    icon: "github"
+                }
+            ],
+            features: [
+                {
+                    name: "Customizable Item & Vehicle Shops",
+                    icon: "cart",
+                    desc: "Buy and sell items or vehicles with configurable buy/sell prices, vehicle colors, and permission restrictions."
+                },
+                {
+                    name: "Custom HUD",
+                    icon: "window",
+                    desc: "User-friendly graphical user interface (/shop) for browsing and purchasing items and vehicles."
+                },
+                {
+                    name: "Discount System",
+                    icon: "percent",
+                    desc: "Built-in support for configurable shop discounts."
+                },
+                {
+                    name: "Async SQL Database",
+                    icon: "database",
+                    desc: "Asynchronous MySQL database storage with ZaupShop database migration and invalid product cleanup tools."
+                },
+                {
+                    name: "Uconomy Integration",
+                    icon: "cash-coin",
+                    desc: "Supports Uconomy, Uconomy2, and other Uconomy-based economy plugins."
+                }
+            ]
+        },
+        {
+            name: "TZones",
+            category: "plugins",
+            status: "active",
+            icon: "pin-map-fill",
+            desc: "A flexible Unturned RocketMod zones plugin with database support, granular protection flags, entry/exit events, item/vehicle restrictions, and server-wide global rules.",
+            tags: ["C#", "Unturned", "RocketMod", ".NET", "Database", "Plugin"],
+            hasPage: true,
+            links: [
+                {
+                    label: "Code",
+                    url: "https://github.com/TavstalDev/TZones",
+                    icon: "github"
+                }
+            ],
+            features: [
+                {
+                    name: "Custom Polygon & Bounded Zones",
+                    icon: "bounding-box",
+                    desc: "Define physical zones using custom nodes with upper and lower vertical bounds, plus full database persistence."
+                },
+                {
+                    name: "20+ Built-in Protection Flags",
+                    icon: "shield-check",
+                    desc: "Control PvP/PvE damage, building, salvaging, lockpicking, vehicle access, generators, and zone entry/exit."
+                },
+                {
+                    name: "Zone Entry & Exit Events",
+                    icon: "bell",
+                    desc: "Automatically send messages, assign or remove permission groups, and trigger UI effects when players enter or leave."
+                },
+                {
+                    name: "Granular Item & Vehicle Blocks",
+                    icon: "slash-circle",
+                    desc: "Restrict specific building items, equipment, unequipping, and vehicle entry or exit per zone."
+                },
+                {
+                    name: "Global Zone Rules",
+                    icon: "globe",
+                    desc: "Enforce server-wide flags via the special __global__ zone with configurable override modes (ALWAYS, NOT_IN_ZONE, NEVER)."
+                }
+            ]
+        },
+        {
+            name: "TAdvancedHealth",
+            category: "plugins",
+            status: "active",
+            icon: "heart-pulse-fill",
+            desc: "A custom Escape from Tarkov-inspired body-part health system plugin for Unturned RocketMod servers with a revive system, hospital respawns, custom UI, and async database support.",
+            tags: ["C#", "Unturned", "RocketMod", ".NET", "Database", "Plugin"],
+            hasPage: true,
+            links: [
+                {
+                    label: "Code",
+                    url: "https://github.com/TavstalDev/TAdvancedHealth",
+                    icon: "github"
+                }
+            ],
+            features: [
+                {
+                    name: "Tarkov-Like Body-Part Health",
+                    icon: "heart-pulse",
+                    desc: "Tracks and manages individual body-part health with admin commands for healing and fine-tuning player health."
+                },
+                {
+                    name: "Revive & Hospital Respawn System",
+                    icon: "hospital",
+                    desc: "Downed player revival mechanics paired with configurable hospital bed respawn points."
+                },
+                {
+                    name: "Custom Health UI",
+                    icon: "window",
+                    desc: "Dedicated Workshop-powered custom UI displaying real-time body-part health status."
+                },
+                {
+                    name: "Anti-Group Friendly Fire",
+                    icon: "shield",
+                    desc: "Prevents teammates within the same group from accidentally damaging each other."
+                },
+                {
+                    name: "Async Database Support",
+                    icon: "database",
+                    desc: "Asynchronous database persistence for player health states and configured hospital beds."
+                }
+            ]
+        },
+        {
+            name: "TSafe",
+            category: "plugins",
+            status: "active",
+            icon: "shield-lock-fill",
+            desc: "A RocketMod plugin for Unturned offering private virtual enderchest-style storage with customizable sizes, global access, admin management commands, and SQL persistence.",
+            tags: ["C#", "Unturned", "RocketMod", ".NET", "SQL", "Plugin"],
+            hasPage: true,
+            links: [
+                {
+                    label: "Code",
+                    url: "https://github.com/TavstalDev/TSafe",
+                    icon: "github"
+                }
+            ],
+            features: [
+                {
+                    name: "Private Virtual Storage",
+                    icon: "safe",
+                    desc: "Gives each player personal enderchest-style virtual storage accessible via /safe open."
+                },
+                {
+                    name: "SQL Persistence",
+                    icon: "database",
+                    desc: "Securely saves player inventories in an SQL database so items persist across sessions."
+                },
+                {
+                    name: "Global Access",
+                    icon: "globe",
+                    desc: "Allows players to access their stored items from anywhere without needing a physical storage container."
+                },
+                {
+                    name: "Customizable Storage Sizes",
+                    icon: "arrows-fullscreen",
+                    desc: "Configure virtual storage dimensions to match your server's gameplay balance and player tiers."
+                },
+                {
+                    name: "Admin Storage Controls",
+                    icon: "shield-lock",
+                    desc: "Inspect individual player safes, clear specific player inventories, or wipe specific item IDs across all safes."
+                }
+            ]
+        },
+        {
+            name: "TTrade",
+            category: "plugins",
+            status: "active",
+            icon: "arrow-left-right",
+            desc: "A simple and secure player-to-player item trading plugin for Unturned RocketMod servers featuring trade requests, live inventory previews, and customizable trade vault sizes.",
+            tags: ["C#", "Unturned", "RocketMod", ".NET", "Plugin"],
+            hasPage: true,
+            links: [
+                {
+                    label: "Code",
+                    url: "https://github.com/TavstalDev/TTrade",
+                    icon: "github"
+                }
+            ],
+            features: [
+                {
+                    name: "Secure Item Trading",
+                    icon: "arrow-left-right",
+                    desc: "Request, accept, decline, or cancel trades with dual-confirmation finalization via /trade finish."
+                },
+                {
+                    name: "Trade Preview",
+                    icon: "eye",
+                    desc: "Inspect the other player's offered items via /trade view before confirming the exchange."
+                },
+                {
+                    name: "Custom Vault Size",
+                    icon: "arrows-fullscreen",
+                    desc: "Configure the trade inventory dimensions to suit your server's item economy."
+                }
+            ]
+        },
+        {
+            name: "TLobbyEditor",
+            category: "plugins",
+            status: "active",
+            icon: "body-text",
+            desc: "A RocketMod plugin for Unturned servers that lets you fully customize how your server appears in the Steam server browser, including descriptions, icons, game tags, reserved slots, and metadata masking.",
+            tags: ["C#", "Unturned", "RocketMod", ".NET", "Plugin"],
+            hasPage: true,
+            links: [
+                {
+                    label: "Code",
+                    url: "https://github.com/TavstalDev/TLobbyEditor",
+                    icon: "github"
+                }
+            ],
+            features: [
+                {
+                    name: "Custom Descriptions & Branding",
+                    icon: "card-text",
+                    desc: "Customize the short tooltip, browser hint, multi-line description, icon, thumbnail, and server links."
+                },
+                {
+                    name: "Game Tags Override",
+                    icon: "tags",
+                    desc: "Override displayed PVP/PVE mode, cheats, BattlEye, difficulty, camera perspective, and Gold-only status."
+                },
+                {
+                    name: "Reserved Slots",
+                    icon: "person-badge",
+                    desc: "Configure reserved player slots with optional permission-based access."
+                },
+                {
+                    name: "Metadata Masking & Replacement",
+                    icon: "eye-slash",
+                    desc: "Hide or replace RocketMod loader details, workshop items, config entries, plugin lists, and gamemode info."
+                },
+                {
+                    name: "Server Advertisement Toggle",
+                    icon: "broadcast",
+                    desc: "Control whether your server is advertised in the public Steam server browser."
+                }
+            ]
+        },
+        {
+            name: "TSkinManager",
+            category: "plugins",
+            status: "active",
+            icon: "bluesky",
+            desc: "A cosmetic and skin restriction plugin for Unturned RocketMod servers—ideal for roleplay—with clothing and weapon skin filters, skin color replacement, and date-based event cosmetics.",
+            tags: ["C#", "Unturned", "RocketMod", ".NET", "Roleplay", "Plugin"],
+            hasPage: true,
+            links: [
+                {
+                    label: "Code",
+                    url: "https://github.com/TavstalDev/TSkinManager",
+                    icon: "github"
+                }
+            ],
+            features: [
+                {
+                    name: "Clothing Cosmetic Restrictions",
+                    icon: "person-bounding-box",
+                    desc: "Restrict equippable player cosmetics such as shirts, pants, hats, and other apparel to preserve server immersion."
+                },
+                {
+                    name: "Weapon Skin Restrictions",
+                    icon: "shield-slash",
+                    desc: "Block or filter weapon cosmetics to maintain a consistent visual theme across your server."
+                },
+                {
+                    name: "Player Skin Color Filter",
+                    icon: "palette",
+                    desc: "Automatically replaces disallowed player skin tones with a randomly selected allowed skin color."
+                },
+                {
+                    name: "Date-Based Event Cosmetics",
+                    icon: "calendar-event",
+                    desc: "Automatically grants custom cosmetics to players during configurable seasonal or scheduled date ranges."
+                }
+            ]
+        },
+        {
+            name: "TFly",
+            category: "plugins",
+            status: "active",
+            icon: "airplane-fill",
+            desc: "A server-side RocketMod plugin for Unturned that lets players toggle flight mode with real-time scroll-wheel speed control, optional god mode, swim animations, cooldowns, and admin controls.",
+            tags: ["C#", "Unturned", "RocketMod", ".NET", "Plugin"],
+            hasPage: true,
+            links: [
+                {
+                    label: "Code",
+                    url: "https://github.com/TavstalDev/TFly",
+                    icon: "github"
+                }
+            ],
+            features: [
+                {
+                    name: "Flight Mode & Controls",
+                    icon: "airplane",
+                    desc: "Toggle flight with /fly, ascend with jump, descend with crouch, and experience realistic swimming animations."
+                },
+                {
+                    name: "Real-Time Speed Control",
+                    icon: "speedometer2",
+                    desc: "Adjust movement speed dynamically mid-flight using the mouse scroll wheel with configurable base speeds and gravity."
+                },
+                {
+                    name: "God Mode & Auto-Heal",
+                    icon: "shield-check",
+                    desc: "Optional invincibility while airborne plus automatic healing of broken legs upon landing."
+                },
+                {
+                    name: "Admin Flight Management",
+                    icon: "person-gear",
+                    desc: "Enable or disable flight for individual players or the entire server at once via /flyadmin."
+                },
+                {
+                    name: "Cooldown & Localization",
+                    icon: "clock",
+                    desc: "Configurable toggle cooldowns with permission bypasses and multi-language support via TLibrary."
+                }
+            ]
+        },
+        {
+            name: "yggraLib",
+            category: "plugins",
+            status: "active",
+            icon: "collection-fill",
+            desc: "A multi-version Minecraft plugin library providing a unified API across Minecraft 1.8.8 to 26.x for configuration, localization, commands, YAML GUIs, Folia-ready scheduling, caching, and SQL databases.",
+            tags: ["Java", "Minecraft", "Spigot", "Paper", "Folia", "Gradle", "Library"],
+            hasPage: true,
+            links: [
+                {
+                    label: "Code",
+                    url: "https://github.com/TavstalDev/yggraLib",
+                    icon: "github"
+                }
+            ],
+            features: [
+                {
+                    name: "Multi-Version Server Support",
+                    icon: "layers",
+                    desc: "Automatically selects the right version-specific implementation at startup so one codebase runs from Minecraft 1.8.8 to 26.x."
+                },
+                {
+                    name: "Plugin Base & Runtime Dependencies",
+                    icon: "box-seam",
+                    desc: "Extend YggraPlugin for a service container, logger, update checker, bStats integration, and automatic runtime library loading via Libby."
+                },
+                {
+                    name: "YAML Config & Localization",
+                    icon: "translate",
+                    desc: "Manage commented YAML configurations with YggraConfig and translate chat messages per player or server-wide."
+                },
+                {
+                    name: "Commands & YAML Inventory Menus",
+                    icon: "window",
+                    desc: "Build permission-checked commands with paginated help menus alongside YAML-driven GUIs with dynamic slot parsing."
+                },
+                {
+                    name: "Folia-Ready Scheduler & UI Services",
+                    icon: "cpu",
+                    desc: "Unified abstractions for main-thread, async, and Folia region scheduling, plus rich chat, scoreboards, boss bars, titles, sounds, and particles."
+                },
+                {
+                    name: "Caching & Multi-SQL Repositories",
+                    icon: "database",
+                    desc: "Built-in Memory and Redis caches alongside HikariCP-backed repository helpers for SQLite, MySQL, and PostgreSQL."
+                }
+            ]
+        },
+        {
+            name: "yggraHeads",
+            category: "plugins",
+            status: "active",
+            icon: "person-badge-fill",
+            desc: "A free and open-source decorative heads plugin for Minecraft 1.8.8–26.x featuring a paginated GUI browser, category navigation, search, favorites, Vault economy support, and SQL/Redis storage.",
+            tags: ["Java", "Minecraft", "Spigot", "Paper", "Vault", "SQL", "Redis", "Plugin"],
+            hasPage: true,
+            links: [
+                {
+                    label: "Code",
+                    url: "https://github.com/TavstalDev/yggraHeads",
+                    icon: "github"
+                }
+            ],
+            features: [
+                {
+                    name: "Category-Based Head Browser",
+                    icon: "grid",
+                    desc: "Browse custom decorative heads organized into configurable categories like animals, blocks, decoration, food, mobs, and plants."
+                },
+                {
+                    name: "Search & Favorites System",
+                    icon: "search",
+                    desc: "Quickly search heads by name and save favorite heads to a dedicated GUI view for instant access."
+                },
+                {
+                    name: "Vault Economy Integration",
+                    icon: "cash-coin",
+                    desc: "Optional Vault integration allowing servers to charge players for specific categories or individual heads."
+                },
+                {
+                    name: "Multi-SQL & Redis Storage",
+                    icon: "database",
+                    desc: "Persistent storage supporting SQLite, MySQL/MariaDB, and PostgreSQL with optional Redis caching and in-memory fallback."
+                },
+                {
+                    name: "Localization & Permissions",
+                    icon: "shield-check",
+                    desc: "Configurable language files, startup update checks, and granular per-command and per-category permission nodes."
+                }
+            ]
+        },
+        {
+            name: "rebus",
+            category: "plugins",
+            status: "active",
+            icon: "archive-fill",
+            desc: "A remastered Minecraft lootbox plugin allowing players to open lootboxes for random rewards via menus or NPCs, with ProtocolLib, Citizens, Vault, and PlayerPoints support.",
+            tags: ["Java", "Minecraft", "Spigot", "Vault", "PlayerPoints", "ProtocolLib", "Citizens", "Plugin"],
+            hasPage: true,
+            links: [
+                {
+                    label: "Code",
+                    url: "https://github.com/TavstalDev/rebus",
+                    icon: "github"
+                }
+            ],
+            features: [
+                {
+                    name: "Lootbox Rewards & GUI",
+                    icon: "box-seam",
+                    desc: "Open lootboxes to receive random rewards through an interactive main menu GUI."
+                },
+                {
+                    name: "Citizens NPC Integration",
+                    icon: "person-badge",
+                    desc: "Spawn and interact with Rebus NPCs to open lootbox menus directly in-world."
+                },
+                {
+                    name: "ProtocolLib Packet Support",
+                    icon: "broadcast",
+                    desc: "Uses ProtocolLib for custom network packet handling and advanced visual features."
+                },
+                {
+                    name: "Vault & PlayerPoints Economy",
+                    icon: "cash-coin",
+                    desc: "Supports lootbox transactions through either Vault economy providers or PlayerPoints."
+                },
+                {
+                    name: "Admin Chest & Reload Controls",
+                    icon: "shield-check",
+                    desc: "Give specific chests to players, spawn NPCs, and reload configurations with /rebusadmin commands."
+                }
+            ]
         }
     ],
     status: {

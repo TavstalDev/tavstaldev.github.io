@@ -13,6 +13,7 @@ function ProjectPage() {
         );
     }
     
+    const hasCarousel = !!project.carousel;
     const hasInstall = !!project.install;
     const hasFeatures = !!project.features;
     const hasUsage = !!project.usage;
@@ -48,6 +49,61 @@ function ProjectPage() {
                 </div>
             </header>
 
+            {/* CAROUSEL */}
+            { hasCarousel? (
+                <section id="carousel">
+                    <div className="container">
+                        <p className="prompt muted">cd /etc/{project.name.toLocaleLowerCase()}/images</p>
+                        <h2 className="h5 mb-3">
+                            <i className="bi bi-image ok me-2"></i>
+                            Images
+                        </h2>
+
+                        <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
+
+                            <div className="carousel-indicators">
+                                {project.carousel.map((x, i) => (
+                                    i === 0 ? (
+                                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to={i} className="active" aria-current="true" aria-label={x.label} />
+                                    ) : (
+
+                                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to={i} aria-label={x.label} />
+                                    )
+                                ))}
+                            </div>
+                            
+                            <div className="carousel-inner">
+                                {project.carousel.map((x, i) => (
+                                    i === 0 ? (
+                                        <div className="carousel-item active">
+                                            <img src={x.image} className="d-block w-100" alt={x.label} />
+                                        </div>
+                                    ) : (
+
+                                        <div className="carousel-item">
+                                            <img src={x.image} className="d-block w-100" alt={x.label} />
+                                        </div>
+                                    )
+                                ))}
+                            </div>
+
+                            {project.carousel.length > 1 ? (
+                                <>
+                                    <button className="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Previous</span>
+                                    </button>
+                                    <button className="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Next</span>
+                                    </button>
+                                </>
+                            ) : (<></>)}
+                        </div>
+                    </div>
+                </section>
+            ) : (<></>)}
+            
             {/* INSTALL */}
             { hasInstall ? (
                 <section id="install">
