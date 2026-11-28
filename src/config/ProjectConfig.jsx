@@ -694,7 +694,7 @@ const projectConfig = {
             ]
         },
         { 
-            name: "KonkordLauncher", 
+            name: "SaplingLauncher", 
             category: "app",
             status: "active",
             icon: "rocket-takeoff-fill",
@@ -704,7 +704,7 @@ const projectConfig = {
             links: [
                 {
                     label: "Code",
-                    url: "https://github.com/TavstalDev/KonkordLauncher", 
+                    url: "https://github.com/TavstalDev/SaplingLauncher", 
                     icon: "github"
                 }
             ],
@@ -738,6 +738,24 @@ const projectConfig = {
                     name: "Automatic Updates & Patch Notes",
                     icon: "arrow-repeat",
                     desc: "Keeps the launcher updated automatically and displays patch notes in an open-source GPLv3 codebase."
+                }
+            ],
+            carousel: [
+                {
+                    label: "instances",
+                    image: "/images/projects/saplingLauncher/instances.png"
+                },
+                {
+                    label: "accounts",
+                    image: "/images/projects/saplingLauncher/accounts.png"
+                },
+                {
+                    label: "skins",
+                    image: "/images/projects/saplingLauncher/skins.png"
+                },
+                {
+                    label: "settings",
+                    image: "/images/projects/saplingLauncher/settings.png"
                 }
             ]
         },
